@@ -9,11 +9,35 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/bar.js"></script>
+  <script src="js/script.js"></script>
   
 </head>
 
 <body class="bg-dark">
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="movieDetails">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Detalles de la película</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <h4 id="movieTitle"></h4>
+      <p id="movieOverview"></p>
+      <ul id="movieGenres"></ul>
+      <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#movieDetailsDropdown">
+        Más detalles
+      </button>
+      <div class="collapse" id="movieDetailsDropdown">
+        <div class="mt-3">
+          <p><strong>Año de lanzamiento:</strong> <span id="movieYear"></span></p>
+          <p><strong>Duración:</strong> <span id="movieDuration"></span></p>
+          <p><strong>Presupuesto:</strong> <span id="movieBudget"></span></p>
+          <p><strong>Ganancias:</strong> <span id="movieRevenue"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <main>
     <div class="text-center container">
       <div class="row py-lg-3">
